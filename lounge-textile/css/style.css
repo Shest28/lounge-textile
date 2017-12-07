@@ -145,6 +145,73 @@ html, body {
     background: url(../img/header/bg-menu.png) repeat;
 }
 
+.header-nav > a {
+    text-decoration: none;
+    font-family: 'Roboto-Regular', 'Arial', sans-serif;
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 0px -1px #333;
+    text-transform: uppercase;
+    padding-right: 20px;
+}
+
+.header-nav > a > span {
+    width: auto;
+}
+
+.underline {
+    border-bottom: 1px solid #fff;
+}
+
+.header-nav > a:not(:last-child) {
+    border-right: 1px dashed #89cac9;
+}
+
+.header-nav > a:not(:first-child) {
+    margin-left: 20px;
+}
+
+.header-nav > a:active > span,
+.header-nav > a:hover > span {
+    border-bottom: 1px solid #fff;
+}
+
+.header-form {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 375px;
+    height: 45px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search {
+    width: 370px;
+    height: 24px;
+    border: 1px solid #b9baba;
+    padding-left: 8px;
+    padding-right: 24px;
+    font-family: 'Roboto-Italic', 'Arial', sans-serif;
+    font-size: 1.3rem;
+    color: #b9baba;
+}
+
+.search:focus {
+    font-family: 'Roboto-Regular', 'Arial', sans-serif;
+    color: #000;
+}
+
+.search-icon {
+    position: absolute;
+    right: 5px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #b9baba;
+    transform: rotateY(-180deg);
+}
+
 .main-content {
     height: auto;
     min-height: 100%;
