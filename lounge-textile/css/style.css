@@ -8,6 +8,11 @@
     src: url(../fonts/Roboto-Italic.ttf) format("truetype");
 }
 
+@font-face{
+    font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto-Italic.ttf) format("truetype");
+}
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -84,33 +89,33 @@ html, body {
     width: 315px;
 }
 
-.about {
+.info {
     width: 430px;
 }
 
-.about-column {
+.info-column {
     width: 200px;
 }
 
-.about-column .phone {
+.info-column .phone {
     text-decoration: none;
     font-size: 3.0rem;
     color: #666;
 }
 
-.about-column .work,
-.about-column .email {
+.info-column .work,
+.info-column .email {
     text-decoration: none;
     font-size: 1.5rem;
     color: #7db0b1;
 }
 
-.about-column .work::before {
+.info-column .work::before {
     content: 'Работаем ';
     color: #000;
 }
 
-.about-column .email::before {
+.info-column .email::before {
     content: 'email: ';
     color: #000;
 }
@@ -219,6 +224,106 @@ html, body {
 
 .main {
     padding-bottom: 220px;
+}
+
+.main-catalog {
+    height: auto;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    'nav promo'
+    'nav about'
+    'nav goods';
+    grid-gap: 30px;
+}
+
+.navigation {
+    grid-area: nav;
+    width: 285px;
+    background: #eee;
+}
+
+.navigation .title-nav {
+    height: 55px;
+    padding-left: 20px;
+    font-family: 'Roboto-Regular', 'Arial', sans-serif;
+    font-size: 1.8rem;
+    line-height: 55px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #000;
+    color: #fff;
+    background: url(../img/header/bg-menu.png) repeat;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+}
+
+.main-menu > a {
+    display: block;
+    padding-left: 20px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #666;
+    position: relative;
+    z-index: 10;
+}
+
+.sub-menu {
+    position: relative;
+    z-index: -1;
+}
+
+.sub-menu > a {
+    margin-top: -40px;
+    display: block;
+    padding-left: 40px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 40px;
+    color: #666;
+}
+
+.main-menu a.sub::after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    color: #6da5a7;
+    padding-left: 10px;
+}
+
+.main-menu a.sub:focus::after {
+    content: "\f0d8";
+    font-family: FontAwesome;
+    color: #6da5a7;
+    padding-left: 10px;
+}
+
+.main-menu a.sub:focus {
+    outline: 0;
+}
+
+.main-menu a.sub:focus + nav {
+    z-index: 10;
+}
+.main-menu a.sub:focus + nav > a {
+    margin-top: 0;
+}
+
+.main-menu a:hover {
+    color: #fff;
+    background: #6da5a7;
+}
+
+.promo-block {
+
 }
 
 .footer {
