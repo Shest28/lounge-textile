@@ -1,0 +1,162 @@
+@font-face{
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: 'Roboto-Italic';
+    src: url(../fonts/Roboto-Italic.ttf) format("truetype");
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-size: 10px;
+    font-family: 'Roboto-Regular', 'Arial', sans-serif;
+    background: #fff;
+}
+
+.header-top {
+    height: 39px;
+    background: #eee url(../img/header/bg-decorate.png) no-repeat center top;
+    border-bottom: 1px solid #fff;
+}
+
+.header-sign {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.header-sign > a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #666;
+    margin-left: 7px;
+}
+
+.header-sign > a:not(:last-child)::after {
+    content: '|';
+    margin-left: 7px;
+}
+
+.header-sign > a:hover {
+    text-decoration: underline;
+}
+
+.header-content {
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid #aaa;
+}
+
+.header-logo {
+    width: 315px;
+}
+
+.about {
+    width: 430px;
+}
+
+.about-column {
+    width: 200px;
+}
+
+.about-column .phone {
+    text-decoration: none;
+    font-size: 3.0rem;
+    color: #666;
+}
+
+.about-column .work,
+.about-column .email {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #7db0b1;
+}
+
+.about-column .work::before {
+    content: 'Работаем ';
+    color: #000;
+}
+
+.about-column .email::before {
+    content: 'email: ';
+    color: #000;
+}
+
+.header-basket {
+    width: 194px;
+    padding-left: 45px;
+    background: url(../img/header/basket.png) no-repeat left;
+    font-size: 1.5rem;
+    color: #7db0b1;
+}
+
+.header-basket .goods-count {
+    border-bottom: 1px dashed #7db0b1;
+}
+
+.header-basket .goods-count::before {
+    content: 'В вашей корзине ';
+    color: #000;
+    border-bottom: 1px solid #fff;
+}
+
+.header-basket .sum::before {
+    content: 'на сумму ';
+    color: #000;
+}
+
+
+.header-menu {
+    width: 100%;
+    height: 45px;
+    background: url(../img/header/bg-menu.png) repeat;
+}
+
+.main-content {
+    height: auto;
+    min-height: 100%;
+}
+
+.main {
+    padding-bottom: 220px;
+}
+
+.footer {
+    margin-top: -220px;
+    height: 219px;
+    border-top: 1px solid #fff;
+    background: #ececec;
+}
