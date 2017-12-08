@@ -299,6 +299,11 @@ html, body {
     padding-left: 10px;
 }
 
+.main-menu a.sub:hover::after,
+.main-menu a.sub:focus:hover::after {
+    color: #fff;
+}
+
 .main-menu a.sub:focus::after {
     content: "\f0d8";
     font-family: FontAwesome;
@@ -323,8 +328,39 @@ html, body {
 }
 
 .promo-block {
-
+    height: 340px;
 }
+
+.advantage {
+    width: 210px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.advantage > div {
+    padding-left: 72px;
+    padding-right: 30px;
+    height: 105px;
+    font-size: 1.5rem;
+    color: #666;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.advantage > div:nth-child(1) {
+    background: #eee url(../img/advantages/payment.png) no-repeat 20px center;
+}
+.advantage > div:nth-child(2) {
+    background: #eee url(../img/advantages/certificate.png) no-repeat 20px center;
+}
+.advantage > div:nth-child(3) {
+    background: #eee url(../img/advantages/choises.png) no-repeat 20px center;
+}
+
 
 .footer {
     margin-top: -220px;
