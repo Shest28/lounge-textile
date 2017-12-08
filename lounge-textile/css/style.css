@@ -10,7 +10,7 @@
 
 @font-face{
     font-family: 'Roboto-Bold';
-    src: url(../fonts/Roboto-Italic.ttf) format("truetype");
+    src: url(../fonts/Roboto-Bold.ttf) format("truetype");
 }
 
 .flex-center {
@@ -230,19 +230,18 @@ html, body {
     height: auto;
     margin-top: 30px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 285px auto;
     grid-template-rows: auto auto auto;
     grid-template-areas:
     'nav promo'
     'nav about'
-    'nav goods';
+    'nav plate';
     grid-gap: 30px;
 }
 
 .navigation {
     grid-area: nav;
     width: 285px;
-    background: #eee;
 }
 
 .navigation .title-nav {
@@ -255,12 +254,14 @@ html, body {
     text-shadow: 1px 1px #000;
     color: #fff;
     background: url(../img/header/bg-menu.png) repeat;
+    user-select: none;
 }
 
 .main-menu {
     display: flex;
     justify-content: flex-start;
     flex-flow: column;
+    background: #eee;
 }
 
 .main-menu > a {
@@ -349,6 +350,7 @@ html, body {
     justify-content: flex-start;
     align-items: center;
     position: relative;
+    user-select: none;
 }
 
 .advantage > div:nth-child(1) {
@@ -359,6 +361,202 @@ html, body {
 }
 .advantage > div:nth-child(3) {
     background: #eee url(../img/advantages/choises.png) no-repeat 20px center;
+}
+
+.about-company {
+    grid-area: about;
+    width: auto;
+    height: 112px;
+    border: 1px solid #eee;
+}
+
+.about-title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #666;
+    height: 110px;
+    width: 148px;
+    padding-left: 15px;
+    background: #eee;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    user-select: none;
+}
+
+.about-desctiption {
+    height: 112px;
+    width: 685px;
+    overflow: hidden;
+    padding: 0 15px;
+    border-left: 1px solid #eee;
+}
+
+.about-desctiption p {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: #666;
+    padding-top: 10px;
+}
+
+.about-more {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #69a4a6;
+    margin-bottom: 10px;
+}
+
+.about-more a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #69a4a6;
+}
+
+.about-more a::after {
+    margin-left: 5px;
+    content: "\2192"
+}
+
+.plate-content {
+    grid-area: plate;
+    width: auto;
+    height: 780px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.plate-content > a {
+    text-decoration: none;
+}
+
+.plate-content figure {
+    display: block;
+    width: 210px;
+    height: 250px;
+    margin: 0;
+    padding: 0;
+}
+
+.plate-content figure > p {
+    margin: 0;
+    padding: 0;
+    width: 210px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.plate-content figure img {
+    min-width: 210px;
+    min-height: 200px;
+}
+
+.plate-content figure > figcaption {
+    width: auto;
+    height: 50px;
+    background: #eee;
+    color: #666;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+}
+
+.additional-content {
+    margin-top: 30px;
+    height: auto;
+}
+
+.additional-nav {
+    height: 50px;
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.additional-nav > a {
+    display: block;
+    background: #ececec;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 1.8rem;
+    line-height: 50px;
+    color: #666;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.additional-nav > a:not(:first-child) {
+    border-left: 1px solid #fff;
+}
+
+.additional-nav > a:hover {
+    color: #fff;
+    background: url(../img/header/bg-menu.png) repeat;
+    border: 1px solid #666;
+    height: 48px;
+}
+
+.additional-nav > a:hover span {
+    border-bottom: 1px dashed #fff;
+}
+
+.plate-goods {
+    height: 300px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.plate-goods > a {
+    text-decoration: none;
+}
+
+.plate-goods figure {
+    display: block;
+    width: 230px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+.plate-goods figure > p {
+    margin: 0;
+    padding: 0;
+    width: 230px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.plate-goods figure img {
+    min-width: 230px;
+    min-height: 200px;
+}
+
+.plate-goods figure > figcaption {
+    width: auto;
+    height: 100px;
+    color: #666;
+    font-size: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.plate-goods .price {
+    font-family: "Roboto-Bold", "Arieal", sans-serif;
+    font-size: 1.8rem;
+    color: #73aaab;
+}
+
+.plate-goods .price::after {
+    content: ' руб.';
 }
 
 
