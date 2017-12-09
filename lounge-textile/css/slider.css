@@ -30,8 +30,8 @@
 }
 
 .slider img {
-	min-width: 660px;
-    min-height: 340px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #switch1:checked ~ .controls label:nth-child(4),
@@ -113,4 +113,19 @@
 #switch4:checked ~ .active label:nth-child(4) {
 	background: #fff;
     border: 3px solid #000;
+}
+
+@media (max-width: 640px) {
+    .controls, .active {
+        display: none;
+    }
+    .slider {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .slides .image {
+        width: 500%;
+        height: auto;
+    }
 }
