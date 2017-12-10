@@ -52,6 +52,7 @@ html, body {
 }
 
 .header-top {
+    min-width: 1200px;
     height: 39px;
     background: #eee url(../img/header/bg-decorate.png) no-repeat center top;
     border-bottom: 1px solid #aaa;
@@ -167,6 +168,7 @@ html, body {
 }
 
 .header-menu {
+    min-width: 1200px;
     width: 100%;
     background: url(../img/header/bg-menu.png) repeat;
 }
@@ -184,8 +186,6 @@ html, body {
 
 .header-nav > a {
     display: block;
-    height: 45px;
-    line-height: 45px;
     text-decoration: none;
     font-family: 'Roboto-Regular', 'Arial', sans-serif;
     font-size: 1.8rem;
@@ -193,10 +193,6 @@ html, body {
     text-shadow: 0px -1px #333;
     text-transform: uppercase;
     padding: 0 20px;
-}
-
-.header-nav > a > span {
-    width: auto;
 }
 
 .underline {
@@ -253,6 +249,9 @@ html, body {
 }
 
 @media (max-width: 640px) {
+    .header-menu {
+        min-width: 100%;
+    }
     .title-menu {
         height: 45px;
         background: #32a2a4;
@@ -272,6 +271,7 @@ html, body {
         width: 100%;
     }
     .header-nav > a {
+        height: 45px;
         border: 0px;
         margin: 0;
         margin-top: -45px;
@@ -281,6 +281,9 @@ html, body {
     }
     .header-search {
         display: none;
+    }
+    .header-nav > a > span {
+        width: 100%;
     }
 }
 
@@ -410,13 +413,149 @@ html, body {
     background: #6da5a7;
 }
 
+@media (max-width: 640px) {
+    .main-menu {
+        display: none;
+    }
+}
+
 .promo-block {
     height: 100%;
 }
 
+.slider {
+    position: relative;
+    width: 660px;
+    height: 340px;
+}
+
+.controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 660px;
+    height: 340px;
+}
+
+.slides article {
+	width: 20%;
+    float: left;
+}
+
+
+.slides .image {
+    width: 500%;
+    height: 340px;
+    overflow: hidden;
+}
+
+.overflow {
+    width: 100%;
+	overflow: hidden;
+}
+
+.slider img {
+    min-width: 100%;
+    min-height: auto;
+}
+
+#switch1:checked ~ .controls label:nth-child(4),
+#switch2:checked ~ .controls label:nth-child(1),
+#switch3:checked ~ .controls label:nth-child(2),
+#switch4:checked ~ .controls label:nth-child(3) {
+	display: block;
+    background: url(../img/slider/arrow-left.png) no-repeat;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+	position: absolute;
+	top: 150px;
+    left: 5px;
+}
+
+#switch1:checked ~ .controls label:nth-child(2),
+#switch2:checked ~ .controls label:nth-child(3),
+#switch3:checked ~ .controls label:nth-child(4),
+#switch4:checked ~ .controls label:nth-child(1) {
+    display: block;
+    background: url(../img/slider/arrow-right.png) no-repeat;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+	position: absolute;
+	top: 150px;
+    right: 5px;
+}
+
+.controls label:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.slider input {
+	display: none;
+}
+
+#switch1:checked ~ .slides .image {
+	margin-left: 0;
+}
+#switch2:checked ~ .slides .image {
+	margin-left: -100%;
+}
+#switch3:checked ~ .slides .image {
+	margin-left: -200%;
+}
+#switch4:checked ~ .slides .image {
+	margin-left: -300%;
+}
+
+.active label {
+    border: 3px solid #fff;
+	border-radius: 50%;
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: #999;
+}
+
+.active {
+    width: 105px;
+	position: absolute;
+	bottom: 15px;
+    left: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.active label:hover{
+    cursor: pointer;
+}
+
+#switch2:checked ~ .active label:nth-child(2),
+#switch1:checked ~ .active label:nth-child(1),
+#switch3:checked ~ .active label:nth-child(3),
+#switch4:checked ~ .active label:nth-child(4) {
+	background: #fff;
+    border: 3px solid #000;
+}
+
 @media (max-width: 640px) {
-    .main-menu {
+    .controls, .active {
         display: none;
+    }
+    .slider {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .slides .image {
+        width: 500%;
+        height: auto;
+    }
+    .slider img {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
@@ -788,6 +927,7 @@ html, body {
 }
 
 .footer {
+    min-width: 1200px;
     margin-top: -220px;
     height: auto;
     border-top: 1px solid #c7c7c7;
@@ -857,6 +997,9 @@ html, body {
 }
 
 @media (max-width: 640px) {
+    .footer {
+        min-width: 100%;
+    }
     .line,
     .footer-search,
     .footer-nav .footer-menu:last-child {
@@ -865,6 +1008,12 @@ html, body {
     .footer-content {
         margin: 0;
         height: auto;
+    }
+    .footer-menu {
+        padding: 10px 0;
+    }
+    .footer-menu a {
+        line-height: 2.2rem;
     }
     .footer-info {
         width: 100%;
