@@ -148,6 +148,7 @@ html, body {
     width: 194px;
     padding-left: 45px;
     background: url(../img/header/basket.png) no-repeat left;
+    background-size: contain;
     font-size: 1.5rem;
     color: #7db0b1;
 }
