@@ -152,13 +152,125 @@ html, body {
     background-size: contain;
     font-size: 1.5rem;
     color: #7db0b1;
+    position: relative;
 }
 
-.header-basket .goods-count {
+.header-basket:hover .mini-basket {
+    display: block;
+}
+
+.mini-basket {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    background: #fff;
+    font-size: 1.8rem;
+    z-index: 1;
+    box-shadow: 0 0 5px #999;
+    display: none;
+}
+
+.list-goods {
+    border-bottom: 1px solid #999;
+    padding: 5px 0px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.list-goods ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-goods ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    padding: 5px 0;
+}
+
+.list-goods ul > li:not(:last-child) {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.list-goods ul > li > span {
+    overflow: hidden;
+    padding-right: 10px;
+    width: 250px;
+}
+
+.list-goods ul > li:hover {
+    background: #e2e2e2;
+}
+
+.list-goods .delete {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    line-height: 40px;
+    color: #64a0a2;
+}
+
+.list-goods .delete:hover {
+    cursor: pointer;
+    color: #ff0000;
+}
+
+.list-goods .name {
+    color: #666;
+    font-size: 1.5rem;
+}
+
+.list-goods .price {
+    color: #7db0b1;
+    font-size: 1.5rem;
+}
+
+.mini-basket .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    height: 40px;
+    width: 100%;
+}
+
+.mini-basket .total-sum {
+    color: #000;
+}
+
+.total-sum::after,
+.list-goods .price::after {
+    content: ' руб'
+}
+
+.mini-basket button {
+    color: #fff;
+    background: #999;
+    border: 0px;
+    height: 40px;
+    width: 100%;
+    font-size: 2.0rem;
+}
+
+.mini-basket button:hover {
+    cursor: pointer;
+    background: #666;
+}
+
+.header-basket .count-goods {
     border-bottom: 1px dashed #7db0b1;
 }
 
-.header-basket .goods-count::before {
+.header-basket .count-goods::before {
     content: 'В вашей корзине ';
     color: #000;
     border-bottom: 1px solid #fff;
@@ -167,6 +279,10 @@ html, body {
 .header-basket .sum::before {
     content: 'на сумму ';
     color: #000;
+}
+
+.header-basket .sum::after {
+    content: ' руб'
 }
 
 .header-menu {
@@ -299,7 +415,7 @@ html, body {
 }
 
 .main {
-    padding-bottom: 320px;
+    padding-bottom: 220px;
 }
 
 .main-catalog {
@@ -321,7 +437,7 @@ html, body {
         grid-template-columns: 100%;
         grid-template-rows: auto auto auto auto;
         grid-template-areas:
-        'nav'
+        "nav"
         'promo'
         'about'
         'plate';
@@ -934,14 +1050,14 @@ html, body {
 
 .footer {
     min-width: 1200px;
-    margin-top: -320px;
+    margin-top: -220px;
     height: auto;
     border-top: 1px solid #c7c7c7;
     background: #ececec;
 }
 
 .footer-content {
-    height: 240px;
+    height: 140px;
     margin-top: 25px;
     margin-bottom: 15px;
 }

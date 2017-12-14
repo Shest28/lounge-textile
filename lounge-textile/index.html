@@ -32,8 +32,19 @@
                         </div>
                     </div>
                     <div class="header-basket">
-                        <span class="goods-count">5 товаров</span>
-                        <span class="sum">10 264 руб.</span>
+                        <div class="mini-basket">
+                            <div class="list-goods">
+                                <ul id="miniList">
+                                </ul>
+                            </div>
+                            <div class="total">
+                                <span>ВСЕГО:</span>
+                                <span class="total-sum" id="total-sum">255</span>
+                            </div>
+                            <button type="button" name="show-basket">Показать корзину</button>
+                        </div>
+                        <span class="count-goods" id="count-goods">5 товаров</span>
+                        <span class="sum" id="main-sum">10 264</span>
                     </div>
             </div>
             <div class="header-menu">
@@ -239,56 +250,56 @@
                     <a href=""><span>новинки</span></a>
                 </nav>
                 <section class="plate-goods space-between">
-                <figure>
+                <figure value="1">
                     <p><img src="img/goods/item1.jpg" alt=""></p>
                     <figcaption class="flex-center">
-                        Постельный комплет льняной «Розовый Сапфир»
+                        <span class="caption">Постельный комплет льняной «Розовый Сапфир»</span>
                         <span class="price">10 755</span>
                     </figcaption>
                     <div class="label-flag">Новинка</div>
                     <div class="shortcut compare-icon"></div>
                     <div class="shortcut increase-icon"></div>
-                    <div class="shortcut basket-icon"></div>
+                    <div class="shortcut basket-icon" id="add-goods"></div>
                 </figure>
-                <figure>
+                <figure value="2">
                     <p><img src="img/goods/item2.jpg" alt=""></p>
                     <figcaption class="flex-center">
-                        Постельный комплект сатин «Lux Elit Mix»
+                        <span class=caption>Постельный комплект сатин «Lux Elit Mix»</span>
                         <span class="price">11 440</span>
                     </figcaption>
                     <div class="shortcut compare-icon"></div>
                     <div class="shortcut increase-icon"></div>
-                    <div class="shortcut basket-icon"></div>
+                    <div class="shortcut basket-icon" id="add-goods"></div>
                 </figure>
-                <figure>
+                <figure value="3">
                     <p><img src="img/goods/item3.jpg" alt=""></p>
                     <figcaption class="flex-center">
-                        Постельный комплект сатин «Lux Elit Mix» 240+005
+                        <span class="caption">Постельный комплект сатин «Lux Elit Mix» 240+005</span>
                         <span class="price">5 400</span>
                     </figcaption>
                     <div class="shortcut compare-icon"></div>
                     <div class="shortcut increase-icon"></div>
-                    <div class="shortcut basket-icon"></div>
+                    <div class="shortcut basket-icon" id="add-goods"></div>
                 </figure>
-                <figure>
+                <figure value="4">
                     <p><img src="img/goods/item4.jpg" alt=""></p>
                     <figcaption class="flex-center">
-                        Подушки бамбук «Теплая голова»
+                        <span class="caption">Подушки бамбук «Теплая голова»</span>
                         <span class="price">14 000</span>
                     </figcaption>
                     <div class="shortcut compare-icon"></div>
                     <div class="shortcut increase-icon"></div>
-                    <div class="shortcut basket-icon"></div>
+                    <div class="shortcut basket-icon" id="add-goods"></div>
                 </figure>
-                <figure>
+                <figure value="5">
                     <p><img src="img/goods/item5.jpg" alt=""></p>
                     <figcaption class="flex-center">
-                        Ортопедический матрас «Комфорт»
+                        <span class="caption">Ортопедический матрас «Комфорт»</span>
                         <span class="price">30 000</span>
                     </figcaption>
                     <div class="shortcut compare-icon"></div>
                     <div class="shortcut increase-icon"></div>
-                    <div class="shortcut basket-icon"></div>
+                    <div class="shortcut basket-icon"  id="add-goods"></div>
                 </figure>
                 </section>
             </div>
@@ -320,7 +331,7 @@
             </div>
             <div class="footer-info">
                 <div class="map">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9bf720f1863eb2c864cadac4edc3253bd82caa3547fbe225eb16a7ffd0b6d118&amp;width=320&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9bf720f1863eb2c864cadac4edc3253bd82caa3547fbe225eb16a7ffd0b6d118&amp;width=300&amp;height=140&amp;lang=ru_RU&amp;scroll=true"></script>
                 </div>
                 <div class="line"></div>
                 <div class="info-block">
